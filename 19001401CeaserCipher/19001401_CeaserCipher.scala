@@ -1,7 +1,7 @@
 object ceasar_cipher{
 	def main(args:Array[String]){
 		val alphabet="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-		val key=3
+		val key=(scala.io.StdIn.readLine("Shift By: ").toInt + alphabet.size) % alphabet.size
 		val s=scala.io.StdIn.readLine("Enter the the word(plain text) to decrypt or encrypt:")
 		println("1.Encrypt\n2.Decrypt\nEnter the choice :")
 		val i=scala.io.StdIn.readInt()
